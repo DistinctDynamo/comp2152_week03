@@ -1,3 +1,5 @@
+import random
+
 # Dice options using list() and range()
 diceOptions = list(range(1,7))
 
@@ -20,3 +22,19 @@ def get_combat_strength(prompt):
 
 combatStrength = get_combat_strength("Enter your combat strength(1-6): ")
 mCombatStrength = get_combat_strength("Enter the monster's combat strength(1-6): ")
+
+for j in range(1, 21, 2):
+    heroRoll = random.choice(diceOptions)
+    monsterRoll = random.choice(diceOptions)
+
+    heroWeapon = weapons[heroRoll-1]
+    monsterWeapon = weapons[monsterRoll-1]
+                            
+    heroTotal = combatStrength + heroRoll
+    monsterTotal = mCombatStrength + monsterRoll
+
+    print(f"\n hero rolled {heroRoll}, monster rolled {monsterRoll}")
+    print(f"\n hero selected {heroWeapon}, monster selected {monsterWeapon}")
+    print(f"\n hero total strength: {heroTotal}, Monster totall strength: {monsterTotal}")
+
+    

@@ -17,3 +17,6 @@ def get_combat_strength(prompt):
                 print("invalid input! Please enter a number between 1-6.")
         except ValueError:
             print("Invalid input.")
+
+combatStrength = get_combat_strength("Enter your combat strength(1-6): ")
+mCombatStrength = get_combat_strength("Enter the monster's combat strength(1-6): ")

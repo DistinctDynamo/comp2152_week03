@@ -2,4 +2,8 @@
 diceOptions = list(range(1,7))
 
 # Weapons Array
-weapons
+weapons = ["fist","Knife","Club","Gun","Bomb","Nuclear Bomb"]
+
+# Display available weapons
+print("Available Weapons: ", ','.join(weapons))
+
